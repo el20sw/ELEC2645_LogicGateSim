@@ -14,4 +14,10 @@ void LOGIC::OR() {
   foo.outputOR();
 }
 
+void LOGIC::NOT() {
+  LOGIC foo;
+  foo.inputNOT();
+  foo.operateNOT();
+  foo.outputNOT();
+}
 

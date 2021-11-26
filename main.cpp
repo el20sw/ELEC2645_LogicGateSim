@@ -15,6 +15,7 @@ void menu_NOR();
 void menu_XNOR();
 void menu_NOT();
 void menu_NAND();
+bool is_integer(std::string num);
 
 int main(int argc, char const *argv[]) {
   logic_gate_menu();
@@ -41,7 +42,7 @@ void print_logic_menu() {
   std::cout << "|\t\t\t\t\t\t\t|\n";
   std::cout << "-------------------------------\n";
 }
-
+/*
 int user_menu_selection() {
   int input;
   bool valid_input = false;
@@ -64,6 +65,37 @@ int user_menu_selection() {
   } while (valid_input == false);
 
   return input;
+}*/
+
+int user_menu_selection() {
+  int input;
+  std::string input_string;
+  bool valid_input = false;
+  int menu_items = 8;
+
+  do {
+    std::cout << "\nSelect item: ";
+    std::cin >> input_string;
+    valid_input = is_integer(input_string);
+    // if input is not an integer, print an error message
+    if (valid_input == false) {
+      std::cout << "Enter an integer!\n";
+    } else {  // if it is an int, check whether in range
+      input = std::stoi(input_string);  // convert to int
+      if (input >= 1 && input <= menu_items) {
+        valid_input = true;
+      } else {
+        std::cout << "Invalid menu item!\n";
+        valid_input = false;
+      }
+    }
+  } while (valid_input == false);
+
+  return input;
+}
+
+bool is_integer(std::string num) {
+  return std::regex_match(num, std::regex("[+-]?[0-9]+"));
 }
 
 void select_menu_item(int input) {
@@ -89,7 +121,8 @@ void select_menu_item(int input) {
     case 7:
       menu_NAND();
       break;
-    
+    case 8:
+      break;
   }
 }
 
@@ -106,30 +139,39 @@ void menu_AND() {
   std::cout << "\n>> AND Gate\n";
   LOGIC logic;
   logic.AND();
+  go_back_to_menu();
 }
 
 void menu_OR() {
   std::cout << "\n>> OR Gate\n";
   LOGIC logic;
   logic.OR();
+  go_back_to_menu();
 }
 
 void menu_XOR() {
   std::cout << "test";
+  go_back_to_menu();
 }
 
 void menu_NOR() {
   std::cout << "test";
+  go_back_to_menu();
 }
 
 void menu_XNOR() {
   std::cout << "test";
+  go_back_to_menu();
 }
 
 void menu_NOT() {
-  std::cout << "test";
+  std::cout << "\n>> NOT Gate\n";
+  LOGIC logic;
+  logic.NOT();
+  go_back_to_menu();
 }
 
 void menu_NAND() {
   std::cout << "test";
+  go_back_to_menu();
 }
