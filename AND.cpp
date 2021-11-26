@@ -20,3 +20,6 @@ void AND::outputAND() {
   int output = (int)_output;
   std::cout << "\n" << _input1 << " AND " << _input2 << " = " << output << std::endl;
 }
+
+
+

@@ -11,3 +11,4 @@ class LOGIC : public AND, public OR {
 };
 
 #endif
+

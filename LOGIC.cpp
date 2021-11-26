@@ -12,4 +12,6 @@ void LOGIC::OR() {
   foo.inputOR();
   foo.operateOR();
   foo.outputOR();
-} 
+}
+
+
