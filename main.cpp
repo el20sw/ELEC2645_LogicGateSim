@@ -5,44 +5,44 @@
 //declare functions
 void logic_gate_menu();
 void print_logic_menu();
-int menu_selection();
+int user_menu_selection();
+void select_menu_item(int input);
+void go_back_to_menu();
+void menu_AND();
+void menu_OR();
+void menu_XOR();
+void menu_NOR();
+void menu_XNOR();
+void menu_NOT();
+void menu_NAND();
 
-int main() {
-  int choice;
-  std::cout << "\nAND(1) or OR(2): ";
-  std::cin >> choice;
-  LOGIC logic;
-  switch (choice) {
-    case 1:
-      logic.AND();
-      break;
-    case 2:
-      logic.OR();
-      break;
-  }
+int main(int argc, char const *argv[]) {
+  logic_gate_menu();
+  return 0;
 }
 
 void logic_gate_menu() {
   print_logic_menu();
-  int input = menu_selection();
+  int input = user_menu_selection();
+  select_menu_item(input);
 }
 
 void print_logic_menu() {
   std::cout << "\n----- Select a Logic Gate -----\n";
-  std::cout << "|\t\t\t\t|\n";
-  std::cout << "|\t1. AND\t\t|\n";
-  std::cout << "|\t2. OR\t\t|\n";
-  std::cout << "|\t3. XOR\t\t|\n";
-  std::cout << "|\t4. NOR\t\t|\n";
-  std::cout << "|\t5. XNOR\t\t\t|\n";
-  std::cout << "|\t6. NOT\t\t|\n";
-  std::cout << "|\t7. NAND\t\t|\n";
-  std::cout << "|\t8. Return to Main Menu\t\t|\n";
-  std::cout << "|\t\t\t\t|\n";
-  std::cout << "---------------------------------\n";
+  std::cout << "|\t\t\t\t\t\t\t|\n";
+  std::cout << "|\t1. AND\t\t\t\t\t|\n";
+  std::cout << "|\t2. OR\t\t\t\t\t|\n";
+  std::cout << "|\t3. XOR\t\t\t\t\t|\n";
+  std::cout << "|\t4. NOR\t\t\t\t\t|\n";
+  std::cout << "|\t5. XNOR\t\t\t\t\t|\n";
+  std::cout << "|\t6. NOT\t\t\t\t\t|\n";
+  std::cout << "|\t7. NAND\t\t\t\t\t|\n";
+  std::cout << "|\t8. Return to Main Menu\t|\n";
+  std::cout << "|\t\t\t\t\t\t\t|\n";
+  std::cout << "-------------------------------\n";
 }
 
-int menu_selection() {
+int user_menu_selection() {
   int input;
   bool valid_input = false;
   int menu_items = 8;
@@ -64,4 +64,72 @@ int menu_selection() {
   } while (valid_input == false);
 
   return input;
+}
+
+void select_menu_item(int input) {
+  switch(input) {
+    case 1:
+      menu_AND();
+      break;
+    case 2:
+      menu_OR();
+      break;
+    case 3:
+      menu_XOR();
+      break;
+    case 4:
+      menu_NOR();
+      break;
+    case 5:
+      menu_XNOR();
+      break;
+    case 6:
+      menu_NOT();
+      break;
+    case 7:
+      menu_NAND();
+      break;
+    
+  }
+}
+
+void go_back_to_menu() {
+  std::string input;
+  do {
+    std::cout << "\nEnter 'b' or 'B' to go back to main menu: ";
+    std::cin >> input;
+  } while (input != "b" && input != "B");
+  logic_gate_menu();
+}
+
+void menu_AND() {
+  std::cout << "\n>> AND Gate\n";
+  LOGIC logic;
+  logic.AND();
+}
+
+void menu_OR() {
+  std::cout << "\n>> OR Gate\n";
+  LOGIC logic;
+  logic.OR();
+}
+
+void menu_XOR() {
+  std::cout << "test";
+}
+
+void menu_NOR() {
+  std::cout << "test";
+}
+
+void menu_XNOR() {
+  std::cout << "test";
+}
+
+void menu_NOT() {
+  std::cout << "test";
+}
+
+void menu_NAND() {
+  std::cout << "test";
 }
