@@ -21,3 +21,9 @@ void LOGIC::NOT() {
   foo.outputNOT();
 }
 
+void LOGIC::XOR() {
+  LOGIC foo;
+  foo.inputXOR();
+  foo.operateXOR();
+  foo.outputXOR();
+}

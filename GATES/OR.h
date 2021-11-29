@@ -3,8 +3,10 @@
 
 class OR {
   public:
-    void inputOR();
-    bool operateOR();
+    virtual void inputOR();
+    void get_inputOR();
+    void set_inputOR();
+    virtual bool operateOR();
     void outputOR();
 
   private:

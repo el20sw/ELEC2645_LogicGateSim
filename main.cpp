@@ -150,7 +150,9 @@ void menu_OR() {
 }
 
 void menu_XOR() {
-  std::cout << "test";
+  std::cout << "\n>> XOR Gate\n";
+  LOGIC logic;
+  logic.XOR();
   go_back_to_menu();
 }
 
