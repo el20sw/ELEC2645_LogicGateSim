@@ -21,5 +21,11 @@ void AND::outputAND() {
   std::cout << "\n" << _input1 << " AND " << _input2 << " = " << output << std::endl;
 }
 
+void AND::set_inputAND(bool input1, bool input2) {
+  _input1 = input1;
+  _input2 = input2;
+}
 
-
+bool AND::get_outputAND() {
+  return _output;
+}

@@ -4,7 +4,7 @@
 #include "NOT.h"
 #include "OR.h"
 
-class NOR : public NOT, public OR {
+class NOR : virtual public NOT, virtual public OR {
   public:
     void inputNOR();
     bool operateNOR();
@@ -13,6 +13,7 @@ class NOR : public NOT, public OR {
   private:
     bool _input1;
     bool _input2;
+    bool _input;
     bool _output;
     int output;
 };

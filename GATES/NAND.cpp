@@ -1,7 +1,7 @@
 #include <iostream>
-#include "NOR.h"
+#include "NAND.h"
 
-void NOR::inputNOR() {
+void NAND::inputNAND() {
   int input1, input2;
   std::cout << "\nEnter input A: ";
   std::cin >> input1;
@@ -11,18 +11,18 @@ void NOR::inputNOR() {
   _input2 = (bool)input2;
 }
 
-bool NOR::operateNOR() {
-  OR foo1;
-  foo1.set_inputOR(_input1, _input2);
-  foo1.operateOR();
-  _input = foo1.get_outputOR();
+bool NAND::operateNAND() {
+  AND foo1;
+  foo1.set_inputAND(_input1, _input2);
+  foo1.operateAND();
+  _input = foo1.get_outputAND();
 
   NOT foo2;
   foo2.set_inputNOT(_input);
   return _output = foo2.operateNOT();
 }
 
-void NOR::outputNOR() {
+void NAND::outputNAND() {
   int output = (int)_output;
-  std::cout << "\n" << _input1 << " NOR " << _input2 << " = " << output << std::endl;
+  std::cout << "\n" << _input1 << " NAND " << _input2 << " = " << output << std::endl;
 }

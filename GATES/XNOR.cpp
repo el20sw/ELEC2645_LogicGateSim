@@ -1,7 +1,7 @@
 #include <iostream>
-#include "NOR.h"
+#include "XNOR.h"
 
-void NOR::inputNOR() {
+void XNOR::inputXNOR() {
   int input1, input2;
   std::cout << "\nEnter input A: ";
   std::cin >> input1;
@@ -11,18 +11,18 @@ void NOR::inputNOR() {
   _input2 = (bool)input2;
 }
 
-bool NOR::operateNOR() {
-  OR foo1;
-  foo1.set_inputOR(_input1, _input2);
-  foo1.operateOR();
-  _input = foo1.get_outputOR();
+bool XNOR::operateXNOR() {
+  XOR foo1;
+  foo1.set_inputXOR(_input1, _input2);
+  foo1.operateXOR();
+  _input = foo1.get_outputXOR();
 
   NOT foo2;
   foo2.set_inputNOT(_input);
   return _output = foo2.operateNOT();
 }
 
-void NOR::outputNOR() {
+void XNOR::outputXNOR() {
   int output = (int)_output;
-  std::cout << "\n" << _input1 << " NOR " << _input2 << " = " << output << std::endl;
+  std::cout << "\n" << _input1 << " XNOR " << _input2 << " = " << output << std::endl;
 }

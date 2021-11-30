@@ -16,3 +16,7 @@ void NOT::outputNOT() {
   int output = (int)_output;
   std::cout << "\nNOT " << _input1 << " = " << output << std::endl;
 }
+
+void NOT::set_inputNOT(bool input) {
+  _input1 = input;
+}

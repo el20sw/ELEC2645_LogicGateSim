@@ -42,30 +42,6 @@ void print_logic_menu() {
   std::cout << "|\t\t\t\t\t\t\t|\n";
   std::cout << "-------------------------------\n";
 }
-/*
-int user_menu_selection() {
-  int input;
-  bool valid_input = false;
-  int menu_items = 8;
-
-  do {
-    std::cout << "\nSelect Item: ";
-    std::cin >> input;
-    valid_input = isdigit(input);
-    if (valid_input == false) {
-      std::cout << "Enter an integer!\n";
-    } else {
-      if (input >=1 && input <= menu_items) {
-        valid_input = true;
-      } else {
-        std::cout << "Invalid input!\n";
-        valid_input = false;
-      }
-    }
-  } while (valid_input == false);
-
-  return input;
-}*/
 
 int user_menu_selection() {
   int input;
@@ -157,12 +133,16 @@ void menu_XOR() {
 }
 
 void menu_NOR() {
-  std::cout << "test";
+  std::cout << "\n>> NOR Gate\n";
+  LOGIC logic;
+  logic.NOR();
   go_back_to_menu();
 }
 
 void menu_XNOR() {
-  std::cout << "test";
+  std::cout << "\n>> XNOR Gate\n";
+  LOGIC logic;
+  logic.XNOR();
   go_back_to_menu();
 }
 
@@ -174,6 +154,8 @@ void menu_NOT() {
 }
 
 void menu_NAND() {
-  std::cout << "test";
+  std::cout << "\n>> NAND Gate\n";
+  LOGIC logic;
+  logic.NAND();
   go_back_to_menu();
 }

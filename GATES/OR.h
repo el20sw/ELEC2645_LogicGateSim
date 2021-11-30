@@ -3,11 +3,11 @@
 
 class OR {
   public:
-    virtual void inputOR();
-    void get_inputOR();
-    void set_inputOR();
-    virtual bool operateOR();
+    void inputOR();
+    void set_inputOR(bool input1, bool input2);
+    bool operateOR();
     void outputOR();
+    bool get_outputOR();
 
   private:
     bool _input1;

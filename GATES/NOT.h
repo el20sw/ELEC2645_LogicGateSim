@@ -4,9 +4,11 @@
 class NOT {
   public:
     void inputNOT();
+    void set_inputNOT(bool input);
     bool operateNOT();
     void outputNOT();
     
+
   private:
     bool _input1;
     bool _output;

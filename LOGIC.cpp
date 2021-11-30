@@ -27,3 +27,24 @@ void LOGIC::XOR() {
   foo.operateXOR();
   foo.outputXOR();
 }
+
+void LOGIC::NOR() {
+  LOGIC foo;
+  foo.inputNOR();
+  foo.operateNOR();
+  foo.outputNOR();
+}
+
+void LOGIC::XNOR() {
+  LOGIC foo;
+  foo.inputXNOR();
+  foo.operateXNOR();
+  foo.outputXNOR();
+}
+
+void LOGIC::NAND() {
+  LOGIC foo;
+  foo.inputNAND();
+  foo.operateNAND();
+  foo.outputNAND();
+}

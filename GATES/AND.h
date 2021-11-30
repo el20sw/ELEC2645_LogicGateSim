@@ -4,8 +4,10 @@
 class AND {
   public:
     void inputAND();
+    void set_inputAND(bool input1, bool input2);
     bool operateAND();
     void outputAND();
+    bool get_outputAND();
     
   private:
     bool _input1;
