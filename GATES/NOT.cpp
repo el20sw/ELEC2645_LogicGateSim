@@ -20,3 +20,7 @@ void NOT::outputNOT() {
 void NOT::set_inputNOT(bool input) {
   _input1 = input;
 }
+
+bool NOT::get_outputNOT() {
+  return _output;
+}

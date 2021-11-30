@@ -7,8 +7,10 @@
 class NOR : virtual public NOT, virtual public OR {
   public:
     void inputNOR();
+    void set_inputNOR(bool input1, bool input2);
     bool operateNOR();
     void outputNOR();
+    bool get_outputNOR();
   
   private:
     bool _input1;

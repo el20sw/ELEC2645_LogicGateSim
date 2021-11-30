@@ -7,8 +7,10 @@
 class NAND : virtual public AND, virtual public NOT {
   public:
     void inputNAND();
+    void set_inputNAND(bool input1, bool input2);
     bool operateNAND();
     void outputNAND();
+    bool get_outputNAND();
 
   private:
     bool _input;

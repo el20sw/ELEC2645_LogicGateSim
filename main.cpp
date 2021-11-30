@@ -1,6 +1,7 @@
 #include <iostream>
 #include <regex>
 #include "LOGIC.h"
+#include "testing.h"
 
 //declare functions
 void logic_gate_menu();
@@ -18,7 +19,14 @@ void menu_NAND();
 bool is_integer(std::string num);
 
 int main(int argc, char const *argv[]) {
-  logic_gate_menu();
+  run_AND_tests();
+  run_OR_tests();
+  run_XOR_tests();
+  run_NOR_tests();
+  run_XNOR_tests();
+  run_NOT_tests();
+  run_NAND_tests();
+  //logic_gate_menu();
   return 0;
 }
 

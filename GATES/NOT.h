@@ -7,6 +7,7 @@ class NOT {
     void set_inputNOT(bool input);
     bool operateNOT();
     void outputNOT();
+    bool get_outputNOT();
     
 
   private:

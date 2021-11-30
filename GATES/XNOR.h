@@ -7,8 +7,10 @@
 class XNOR : virtual public NOT, virtual public XOR {
   public:
     void inputXNOR();
+    void set_inputXNOR(bool input1, bool input2);
     bool operateXNOR();
     void outputXNOR();
+    bool get_outputXNOR();
 
   private:
     bool _input1;
