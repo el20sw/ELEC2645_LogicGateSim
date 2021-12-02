@@ -1,4 +1,3 @@
-#include <iostream>
 #include "NAND.h"
 
 void NAND::inputNAND() {

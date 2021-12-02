@@ -1,4 +1,3 @@
-#include <iostream>
 #include "XNOR.h"
 
 void XNOR::inputXNOR() {

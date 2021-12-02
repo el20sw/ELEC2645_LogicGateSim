@@ -15,7 +15,7 @@ class AND {
     bool _input1;
     bool _input2;
     bool _output;
-    int output;
+    int output; 
 };
 
 #endif

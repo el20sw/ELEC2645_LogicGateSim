@@ -1,4 +1,3 @@
-#include <iostream>
 #include "OR.h"
 
 void OR::inputOR() {

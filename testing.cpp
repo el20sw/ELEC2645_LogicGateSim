@@ -1,4 +1,3 @@
-#include <iostream>
 #include "testing.h"
 
 //test AND gate

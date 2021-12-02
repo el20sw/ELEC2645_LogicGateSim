@@ -1,6 +1,8 @@
 #ifndef NOT_H
 #define NOT_H
 
+#include "GATE.h"
+
 class NOT {
   public:
     void inputNOT();

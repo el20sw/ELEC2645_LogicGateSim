@@ -1,6 +1,4 @@
-#include <iostream>
 #include "AND.h"
-
 
 void AND::inputAND() {
   std::string input1_string, input2_string;

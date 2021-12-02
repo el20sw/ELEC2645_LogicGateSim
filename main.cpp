@@ -1,6 +1,7 @@
 #include <iostream>
 #include <regex>
 #include "LOGIC.h"
+#include "BITSET_LOGIC.h"
 #include "testing.h"
 
 //declare functions
@@ -29,7 +30,9 @@ int main(int argc, char const *argv[]) {
   run_NOT_tests();
   run_NAND_tests();
   */
-  logic_gate_menu();
+  set_input_byte1();
+  get_input_byte1();
+  //logic_gate_menu();
   return 0;
 }
 

@@ -1,10 +1,19 @@
-#include <iostream>
 #include "NOT.h"
 
 void NOT::inputNOT() {
+  std::string input1_string;
   int input1;
-  std::cout << "\nEnter input: ";
-  std::cin >> input1;
+  bool input1_test = false;
+
+  do {
+    std::cout << "\nEnter input: ";
+    std::cin >> input1_string;
+    input1_test = input_test(input1_string);
+    if (input1_test == true) {
+      input1 = std::stoi(input1_string);
+    }
+  } while (input1_test == false);
+
   _input1 = (bool)input1;
 }
 

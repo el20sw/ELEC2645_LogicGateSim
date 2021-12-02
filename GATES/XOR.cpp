@@ -1,4 +1,3 @@
-#include <iostream>
 #include "XOR.h"
 
 void XOR::inputXOR() {
