@@ -3,6 +3,7 @@
 
 #include "NOT.h"
 #include "OR.h"
+#include "GATE.h"
 
 class NOR : virtual public NOT, virtual public OR {
   public:

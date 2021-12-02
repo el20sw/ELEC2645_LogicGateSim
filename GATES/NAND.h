@@ -3,6 +3,7 @@
 
 #include "NOT.h"
 #include "AND.h"
+#include "GATE.h" 
 
 class NAND : virtual public AND, virtual public NOT {
   public:

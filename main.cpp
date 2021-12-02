@@ -19,6 +19,8 @@ void menu_NAND();
 bool is_integer(std::string num);
 
 int main(int argc, char const *argv[]) {
+  //calling testing functions
+  /*
   run_AND_tests();
   run_OR_tests();
   run_XOR_tests();
@@ -26,7 +28,8 @@ int main(int argc, char const *argv[]) {
   run_XNOR_tests();
   run_NOT_tests();
   run_NAND_tests();
-  //logic_gate_menu();
+  */
+  logic_gate_menu();
   return 0;
 }
 

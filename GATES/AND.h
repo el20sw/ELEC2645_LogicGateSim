@@ -1,6 +1,8 @@
 #ifndef AND_H
 #define AND_H
 
+#include "GATE.h" 
+
 class AND {
   public:
     void inputAND();

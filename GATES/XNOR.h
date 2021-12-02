@@ -3,6 +3,7 @@
 
 #include "NOT.h"
 #include "XOR.h"
+#include "GATE.h"
 
 class XNOR : virtual public NOT, virtual public XOR {
   public:
