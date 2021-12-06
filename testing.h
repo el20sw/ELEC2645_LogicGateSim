@@ -33,4 +33,6 @@ int run_NOT_tests();
 bool test_NAND(int a, int b, int expected);
 int run_NAND_tests();
 
+void run_tests();
+
 #endif

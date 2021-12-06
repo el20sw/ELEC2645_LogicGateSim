@@ -193,3 +193,15 @@ int run_NAND_tests() {
   std::cout << "\nNAND gate passed " << passed << " tests.\n";
   return passed;
 }
+
+void run_tests() {
+  std::cout << "\n>>> Logic Gate Testing <<<\n" << std::endl;
+  run_AND_tests();
+  run_OR_tests();
+  run_XOR_tests();
+  run_NOR_tests();
+  run_XNOR_tests();
+  run_NOT_tests();
+  run_NAND_tests();
+  return;
+}

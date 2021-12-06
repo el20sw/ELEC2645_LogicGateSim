@@ -22,3 +22,4 @@ class NAND : virtual public AND, virtual public NOT {
 };
 
 #endif
+

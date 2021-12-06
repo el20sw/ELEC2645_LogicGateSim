@@ -52,3 +52,5 @@ void NAND::set_inputNAND(bool input1, bool input2) {
 bool NAND::get_outputNAND() {
   return _output;
 }
+
+
