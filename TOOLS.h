@@ -8,7 +8,7 @@ void get_two_input(bool &inputA, bool &inputB);
 void get_carry_in(bool &carry_in);
 
 void half_adder(bool inputA, bool inputB, bool &sum, bool &carry_out);
-void full_adder(bool inputA, bool inputB, bool carry_in, bool &sum, bool &carry_out);
-void ripple_carry_adder();
+void full_adder(bool carry_in, bool inputA, bool inputB, bool &sum, bool &carry_out);
+
 
 #endif

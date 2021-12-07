@@ -57,7 +57,7 @@ void half_adder(bool inputA, bool inputB, bool &sum, bool &carry_out) {
   carry_out = foo.get_outputAND();
 }
 
-void full_adder(bool inputA, bool inputB, bool carry_in, bool &sum, bool &carry_out) {
+void full_adder(bool carry_in, bool inputA, bool inputB, bool &sum, bool &carry_out) {
   bool A_xor_B, A_and_B, temp;
 
   LOGIC foo;

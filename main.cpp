@@ -27,11 +27,11 @@ void go_back_to_tools_menu();
 void half_adder_tool();
 void full_adder_tool();
 
+void menu_TESTS();
+
+// main function
 int main(int argc, char const *argv[]) {
-  /*
-  //calling testing functions
-  run_tests();
-  */
+  
   logic_gate_menu();
 
   return 0;
@@ -54,7 +54,8 @@ void print_logic_menu() {
   std::cout << "|\t6. NOT\t\t\t\t\t|\n";
   std::cout << "|\t7. NAND\t\t\t\t\t|\n";
   std::cout << "|\t8. TOOLS\t\t\t\t|\n";
-  std::cout << "|\t9. Exit current menu\t|\n";
+  std::cout << "|\t9. Run all tests\t\t|\n";
+  std::cout << "|\t10. Exit current menu\t|\n";
   std::cout << "|\t\t\t\t\t\t\t|\n";
   std::cout << "-------------------------------\n";
 }
@@ -63,7 +64,7 @@ int logic_menu_selection() {
   int input;
   std::string input_string;
   bool valid_input = false;
-  int menu_items = 9;
+  int menu_items = 10;
 
   do {
     std::cout << "\nSelect item: ";
@@ -117,6 +118,10 @@ void select_menu_item(int input) {
       menu_TOOLS();
       break;
     case 9:
+      menu_TESTS();
+      break;
+    //default
+    case 10:
       break;
   }
 }
@@ -124,7 +129,7 @@ void select_menu_item(int input) {
 void go_back_to_logic_menu() {
   std::string input;
   do {
-    std::cout << "\nEnter 'b' or 'B' to exit current menu: ";
+    std::cout << "\nEnter 'b' or 'B' to return to menu: ";
     std::cin >> input;
   } while (input != "b" && input != "B");
   logic_gate_menu();
@@ -186,6 +191,11 @@ void menu_TOOLS() {
   go_back_to_tools_menu();
 }
 
+void menu_TESTS() {
+  run_tests();
+  go_back_to_logic_menu();
+}
+
 void print_tools_menu() {
   std::cout << "\n------ Select a Logic Tool ------\n";
   std::cout << "|\t\t\t\t\t\t\t\t|\n";
@@ -226,7 +236,7 @@ int tools_menu_selection() {
 void go_back_to_tools_menu() {
   std::string input;
   do {
-    std::cout << "\nEnter 'b' or 'B' to exit current menu: ";
+    std::cout << "\nEnter 'b' or 'B' to return to menu: ";
     std::cin >> input;
   } while (input != "b" && input != "B");
   menu_TOOLS();

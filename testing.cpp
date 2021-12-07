@@ -194,8 +194,64 @@ int run_NAND_tests() {
   return passed;
 }
 
+//test half_adder
+bool test_half_adder(bool a, bool b, bool expected_sum, bool expected_carry_out) {
+  bool sum, carry_out;
+  std::cout << "Half-adder(" << a << "+" << b << ") = ";
+  half_adder(a, b, sum, carry_out);
+
+  if (sum == expected_sum && carry_out == expected_carry_out) {
+    std::cout << sum  << ", " << carry_out << " : passed\n";
+    return true;
+  } else {
+    std::cout << "FAILED! " << sum << ", " << carry_out << " (expecting " << expected_sum << ", " << expected_carry_out << ").\n";
+    return false; 
+  }
+}
+
+int run_half_adder_tests() {
+  std::cout << "\nTesting Half-Adder...\n" << std::endl;
+  int passed = 0;
+  if (test_half_adder(0, 0, 0, 0)) passed ++;
+  if (test_half_adder(0, 1, 1, 0)) passed ++;
+  if (test_half_adder(1, 0, 1, 0)) passed ++;
+  if (test_half_adder(1, 1, 0, 1)) passed ++;
+  std::cout << "\nHalf-Adder passed " << passed << " tests.\n";
+  return passed;
+}
+
+//test full-adder
+bool test_full_adder(bool carry_in, bool a, bool b, bool expected_sum, bool expected_carry_out) {
+  bool sum, carry_out;
+  std::cout << "Full-adder(" << carry_in << "+" << a << "+" << b << ") = ";
+  full_adder(a, b, carry_in, sum, carry_out);
+
+  if (sum == expected_sum && carry_out == expected_carry_out) {
+    std::cout << sum  << ", " << carry_out << " : passed\n";
+    return true;
+  } else {
+    std::cout << "FAILED! " << sum << ", " << carry_out << " (expecting " << expected_sum << ", " << expected_carry_out << ").\n";
+    return false; 
+  }
+}
+
+int run_full_adder_tests() {
+  std::cout << "\nTesting Full-Adder...\n" << std::endl;
+  int passed = 0;
+  if (test_full_adder(0, 0, 0, 0, 0)) passed++;
+  if (test_full_adder(0, 0, 1, 1, 0)) passed++;
+  if (test_full_adder(0, 1, 0, 1, 0)) passed++;
+  if (test_full_adder(0, 1, 1, 0, 1)) passed++;
+  if (test_full_adder(1, 0, 0, 1, 0)) passed++;
+  if (test_full_adder(1, 0, 1, 0, 1)) passed++;
+  if (test_full_adder(1, 1, 0, 0, 1)) passed++;
+  if (test_full_adder(1, 1, 1, 1, 1)) passed++;
+  std::cout << "\nFull-Adder passed " << passed << " tests.\n";
+  return passed;
+}
+
 void run_tests() {
-  std::cout << "\n>>> Logic Gate Testing <<<\n" << std::endl;
+  std::cout << "\n>>> Logic Gate and Tool Testing <<<\n" << std::endl;
   run_AND_tests();
   run_OR_tests();
   run_XOR_tests();
@@ -203,5 +259,7 @@ void run_tests() {
   run_XNOR_tests();
   run_NOT_tests();
   run_NAND_tests();
+  run_half_adder_tests();
+  run_full_adder_tests();
   return;
 }
