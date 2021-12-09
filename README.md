@@ -1,5 +1,6 @@
 # ELEC2645: Assignment 2
 
-- Current build is a logic gate simulator in which the user can select a logic gate to simulate, provide the inputs and then get the correct output
+- Final Build is a Logic Gate Simulator where the user can provide single bit inputs to get an output
+- Further functionality includes a half-adder and full-adder and full testing suite where all possible input combinations are given along with relevant outputs
 
 (to be part of larger project with two other calculator options)
