@@ -12,3 +12,5 @@ void full_adder(bool carry_in, bool inputA, bool inputB, bool &sum, bool &carry_
 
 
 #endif
+
+
