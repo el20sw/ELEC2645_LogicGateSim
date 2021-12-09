@@ -29,6 +29,10 @@ void full_adder_tool();
 
 void menu_TESTS();
 
+// global variables
+inline int choice_logic = 0;
+inline int choice_logic_tools = 3;
+
 // main function
 int main(int argc, char const *argv[]) {
   
@@ -38,9 +42,13 @@ int main(int argc, char const *argv[]) {
 }
 
 void logic_gate_menu() {
-  print_logic_menu();
-  int input = logic_menu_selection();
-  select_menu_item(input);
+  do {
+    choice_logic_tools = 0;
+    print_logic_menu();
+    int input = logic_menu_selection();
+    choice_logic = input;
+    select_menu_item(input);
+  } while (choice_logic != 10);
 }
 
 void print_logic_menu() {
@@ -120,8 +128,11 @@ void select_menu_item(int input) {
     case 9:
       menu_TESTS();
       break;
-    //default
     case 10:
+      exit(1);
+      break;
+    default:
+      exit(1);
       break;
   }
 }
@@ -185,10 +196,12 @@ void menu_NAND() {
 }
 
 void menu_TOOLS() {
-  print_tools_menu();
-  int input = tools_menu_selection();
-  select_tool_item(input);
-  go_back_to_tools_menu();
+  do {
+    print_tools_menu();
+    int input = tools_menu_selection();
+    choice_logic_tools = input;
+    select_tool_item(input);
+  } while (choice_logic_tools != 3);
 }
 
 void menu_TESTS() {
@@ -261,6 +274,7 @@ void half_adder_tool() {
   get_two_input(inputA, inputB);
   half_adder(inputA, inputB, sum, carry_out);
   std::cout << "\nSum = " << sum << "\nCarry Out = " << carry_out << std::endl;
+  go_back_to_tools_menu();
 }
 
 void full_adder_tool() {
@@ -270,4 +284,5 @@ void full_adder_tool() {
   get_two_input(inputA, inputB);
   full_adder(inputA, inputB, carry_in, sum, carry_out);
   std::cout << "\nSum = " << sum << "\nCarry Out = " << carry_out << std::endl;
+  go_back_to_tools_menu();
 }
